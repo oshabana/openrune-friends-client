@@ -14,17 +14,17 @@ if [ "$actual" != "$expected" ]; then
   echo 'RSProx download hash does not match the reviewed release.' >&2
   exit 1
 fi
-javac --release 21 -d "$tmp" bundle/OpenRuneLauncher.java
+javac --release 21 -d "$tmp" bundle/ScapeMarLauncher.java
 for platform in macos windows linux; do
-  dir="$tmp/OpenRune-Friends-$platform"
+  dir="$tmp/ScapeMar-$platform"
   mkdir -p "$dir"
-  cp "$tmp/OpenRuneLauncher.class" "$tmp/rsprox-launcher.jar" \
+  cp "$tmp/ScapeMarLauncher.class" "$tmp/rsprox-launcher.jar" \
     proxy-targets.yaml bundle/README.txt bundle/RSProx-LICENSE.txt "$dir/"
   case "$platform" in
-    macos) cp 'bundle/Launch OpenRune.command' "$dir/" ;;
-    windows) cp 'bundle/Launch OpenRune.bat' "$dir/" ;;
-    linux) cp 'bundle/Launch OpenRune.sh' "$dir/" ;;
+    macos) cp 'bundle/Launch ScapeMar.command' "$dir/" ;;
+    windows) cp 'bundle/Launch ScapeMar.bat' "$dir/" ;;
+    linux) cp 'bundle/Launch ScapeMar.sh' "$dir/" ;;
   esac
-  (cd "$tmp" && zip -q -r "$out/OpenRune-Friends-$platform.zip" "OpenRune-Friends-$platform")
+  (cd "$tmp" && zip -q -r "$out/ScapeMar-$platform.zip" "ScapeMar-$platform")
 done
-(cd "$out" && shasum -a 256 ./*.zip > SHA256SUMS.txt)
+(cd "$out" && shasum -a 256 ./ScapeMar-*.zip > SHA256SUMS.txt)

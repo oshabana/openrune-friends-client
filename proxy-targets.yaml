@@ -1,6 +1,6 @@
 config:
   - id: 1
-    name: OpenRune Friends
+    name: ScapeMar
     jav_config_url: https://raw.githubusercontent.com/oshabana/openrune-friends-client/main/jav_config.ws
     varp_count: 15000
     revision: 240

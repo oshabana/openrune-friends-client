@@ -10,7 +10,7 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class OpenRuneLauncher {
+public class ScapeMarLauncher {
     private static final String PLUGIN_KEY = "runelite.externalPlugins";
     private static final Pattern PROFILE = Pattern.compile("\\{([^{}]*)\\}");
     private static final Pattern NAME = Pattern.compile("\"name\"\\s*:\\s*\"([^\"]+)\"");
@@ -20,13 +20,13 @@ public class OpenRuneLauncher {
     public static void main(String[] args) throws Exception {
         Path bundle = Path.of(System.getProperty("user.dir"));
         if (!Files.isRegularFile(bundle.resolve("proxy-targets.yaml"))) {
-            throw new IOException("Run this from the extracted OpenRune bundle.");
+            throw new IOException("Run this from the extracted ScapeMar bundle.");
         }
         Path home = Path.of(System.getProperty("user.home"));
         installTarget(bundle.resolve("proxy-targets.yaml"), home.resolve(".rsprox/proxy-targets.yaml"));
         installPlugins(home.resolve(".runelite"));
         if (args.length > 0 && args[0].equals("--setup-only")) {
-            System.out.println("OpenRune connection and plugins configured.");
+            System.out.println("ScapeMar connection and plugins configured.");
             return;
         }
         Path launcher = bundle.resolve("rsprox-launcher.jar");
@@ -43,8 +43,14 @@ public class OpenRuneLauncher {
         if (Files.exists(target)) {
             String existing = Files.readString(target, StandardCharsets.UTF_8);
             if (!existing.equals(bundled)) {
-                throw new IOException("An RSProx target file already exists at " + target
-                    + ". Move it aside or import the OpenRune URL in RSProx; your targets were not changed.");
+                String previous = bundled.replace("name: ScapeMar", "name: OpenRune Friends");
+                if (!existing.equals(previous)) {
+                    throw new IOException("An RSProx target file already exists at " + target
+                        + ". Move it aside or import the ScapeMar URL in RSProx; your targets were not changed.");
+                }
+                Files.copy(target, target.resolveSibling("proxy-targets.yaml.scapemar-backup"),
+                    StandardCopyOption.REPLACE_EXISTING);
+                Files.writeString(target, bundled, StandardCharsets.UTF_8);
             }
             return;
         }
@@ -110,7 +116,7 @@ public class OpenRuneLauncher {
             lines.add(setting);
         }
         if (Files.exists(config)) {
-            Files.copy(config, config.resolveSibling(config.getFileName() + ".openrune-backup"),
+            Files.copy(config, config.resolveSibling(config.getFileName() + ".scapemar-backup"),
                 StandardCopyOption.REPLACE_EXISTING);
         }
         Files.write(config, lines, StandardCharsets.UTF_8);

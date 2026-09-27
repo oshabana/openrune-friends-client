@@ -1,6 +1,6 @@
-# OpenRune Friends
+# ScapeMar
 
-Play on the OpenRune Friends world. The server owner runs the game; you only need the client bundle.
+ScapeMar client downloads for world 255. The server is already hosted. [Choose your download](https://oshabana.github.io/openrune-friends-client/).
 
 ## Download
 
@@ -8,13 +8,13 @@ Choose your computer from the [latest release](https://github.com/oshabana/openr
 
 | Computer | File | Open after extracting |
 | --- | --- | --- |
-| Mac | `OpenRune-Friends-macos.zip` | `Launch OpenRune.command` |
-| Windows | `OpenRune-Friends-windows.zip` | `Launch OpenRune.bat` |
-| Linux | `OpenRune-Friends-linux.zip` | `Launch OpenRune.sh` |
+| Mac | `ScapeMar-macos.zip` | `Launch ScapeMar.command` |
+| Windows | `ScapeMar-windows.zip` | `Launch ScapeMar.bat` |
+| Linux | `ScapeMar-linux.zip` | `Launch ScapeMar.sh` |
 
 Install [Java 21](https://adoptium.net/temurin/releases/?version=21) first. Extract the whole zip, then open the launcher. On Mac, approve the network prompt. If macOS blocks the downloaded launcher, right-click it and choose **Open**.
 
-The launcher installs the public server connection and selects **Quest Helper** and **117 HD** for RuneLite's Plugin Hub. RSProx then opens: select **OpenRune Friends**, choose **RuneLite**, and click **Launch**. Sign in to world 255 with the account name and password you want to use here.
+The launcher installs the public server connection and selects **Quest Helper** and **117 HD** for RuneLite's Plugin Hub. RSProx then opens: select **ScapeMar**, choose **RuneLite**, and click **Launch**. Sign in to world 255 with the account name and password you want to use here.
 
 If either plugin does not appear, open RuneLite's wrench icon, open **Plugin Hub**, search for **Quest Helper** or **117 HD**, and click **Install**. The plugins come from RuneLite's Plugin Hub and receive updates there.
 
@@ -22,7 +22,7 @@ The bundle contains the [official RSProx launcher](https://github.com/blurite/rs
 
 ## If you already use RSProx
 
-The launcher leaves an existing, different RSProx target file alone. Import this URL in RSProx instead:
+The launcher updates the previous OpenRune Friends profile to ScapeMar. It leaves any other existing RSProx target file alone. If you have a different target file, import this URL in RSProx instead:
 
 `https://raw.githubusercontent.com/oshabana/openrune-friends-client/main/proxy-targets.yaml`
 

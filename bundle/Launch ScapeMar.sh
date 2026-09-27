@@ -1,4 +1,4 @@
 #!/bin/sh
 set -eu
 cd "$(dirname "$0")"
-exec java -cp . OpenRuneLauncher
+exec java -cp . ScapeMarLauncher

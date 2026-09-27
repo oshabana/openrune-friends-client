@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 180" role="img" aria-labelledby="title">
+  <title id="title">ScapeMar</title>
+  <defs>
+    <linearGradient id="gold" x2="0" y2="1">
+      <stop stop-color="#fff0b2"/>
+      <stop offset=".34" stop-color="#e8c773"/>
+      <stop offset=".62" stop-color="#b77c32"/>
+      <stop offset="1" stop-color="#efcc76"/>
+    </linearGradient>
+    <linearGradient id="shield" x2="0" y2="1">
+      <stop stop-color="#645c4b"/>
+      <stop offset="1" stop-color="#262922"/>
+    </linearGradient>
+  </defs>
+  <path d="M27 17h112v95c0 24-25 44-56 57-31-13-56-33-56-57Z" fill="#1d1b16" stroke="#bca36b" stroke-width="7"/>
+  <path d="M36 27h94v83c0 18-17 34-47 48-30-14-47-30-47-48Z" fill="url(#shield)" stroke="#35291b" stroke-width="3"/>
+  <path d="M83 42v98M49 91h68" stroke="#2c2116" stroke-width="10" stroke-linecap="round"/>
+  <path d="M83 42v98M49 91h68" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="83" cy="91" r="11" fill="#3a2917" stroke="#eed28e" stroke-width="3"/>
+  <text x="166" y="123" font-family="Georgia, 'Times New Roman', serif" font-size="109" font-weight="700" font-variant="small-caps" letter-spacing="-5" fill="url(#gold)" stroke="#251b12" stroke-width="7" stroke-linejoin="round" paint-order="stroke fill">ScapeMar</text>
+  <path d="M167 138h608" stroke="#2a1e13" stroke-width="8"/>
+  <path d="M167 138h608" stroke="#c49a52" stroke-width="3"/>
+</svg>
