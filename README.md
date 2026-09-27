@@ -1,31 +1,33 @@
-# Join OpenRune Friends
+# OpenRune Friends
 
-The server owner runs the game. Players install only a client.
+Play on the OpenRune Friends world. The server owner runs the game; you only need the client bundle.
 
-## Windows or Linux
+## Download
 
-1. Install [RSProx from its official releases](https://github.com/blurite/rsprox/releases).
-2. Open RSProx. Next to the target selector, click **+**, choose **From URL**, and paste:
+Choose your computer from the [latest release](https://github.com/oshabana/openrune-friends-client/releases/latest):
 
-   `https://raw.githubusercontent.com/oshabana/openrune-friends-client/main/proxy-targets.yaml`
+| Computer | File | Open after extracting |
+| --- | --- | --- |
+| Mac | `OpenRune-Friends-macos.zip` | `Launch OpenRune.command` |
+| Windows | `OpenRune-Friends-windows.zip` | `Launch OpenRune.bat` |
+| Linux | `OpenRune-Friends-linux.zip` | `Launch OpenRune.sh` |
 
-3. Restart RSProx, select **OpenRune Friends**, choose **RuneLite**, and launch.
-4. Sign in to world 255 with the account name and password you want to use on this server.
+Install [Java 21](https://adoptium.net/temurin/releases/?version=21) first. Extract the whole zip, then open the launcher. On Mac, approve the network prompt. If macOS blocks the downloaded launcher, right-click it and choose **Open**.
 
-The import URL includes the server's public login key, world address, and revision 240 client settings. The game uses TCP port 43594. If RSProx reports that the target could not be downloaded, check that the import URL opens in your browser and retry.
+The launcher installs the public server connection and selects **Quest Helper** and **117 HD** for RuneLite's Plugin Hub. RSProx then opens: select **OpenRune Friends**, choose **RuneLite**, and click **Launch**. Sign in to world 255 with the account name and password you want to use here.
 
-## macOS (manual setup)
+If either plugin does not appear, open RuneLite's wrench icon, open **Plugin Hub**, search for **Quest Helper** or **117 HD**, and click **Install**. The plugins come from RuneLite's Plugin Hub and receive updates there.
 
-This Mac has launched RuneLite through RSProx and loaded game data from the public server. A full graphical login and a friend-ready Mac installer still need testing. RSProx's [private-server notes](https://github.com/blurite/rsprox#private-server-usage-osrs) list Windows and Linux, but its [macOS instructions](https://github.com/blurite/rsprox#macos-support-osrs) describe the loopback alias needed for a custom target.
+The bundle contains the [official RSProx launcher](https://github.com/blurite/rsprox/releases/tag/v1.0), the public connection profile, and our setup launcher. It contains no server code, account credentials, or modified RuneLite binary. The [release checksums](https://github.com/oshabana/openrune-friends-client/releases/latest) let you check the downloaded zips. This is an independent community server, not a Jagex or RuneLite service.
 
-1. Install Java 21 and download `rsprox-launcher.jar` from the [official RSProx releases](https://github.com/blurite/rsprox/releases) into Downloads.
-2. In Terminal, add the alias for world 255 on the first custom target, then start RSProx:
+## If you already use RSProx
 
-   ```bash
-   sudo ifconfig lo0 alias 127.0.255.3 up
-   "$(/usr/libexec/java_home -v 21)/bin/java" -jar "$HOME/Downloads/rsprox-launcher.jar"
-   ```
+The launcher leaves an existing, different RSProx target file alone. Import this URL in RSProx instead:
 
-3. Import the same URL shown in the Windows/Linux section, restart RSProx, then select **OpenRune Friends** and **RuneLite**.
+`https://raw.githubusercontent.com/oshabana/openrune-friends-client/main/proxy-targets.yaml`
 
-The alias may need to be added again after a Mac restart. If this is not the first custom target in RSProx, its group number may differ; the [RSProx alias instructions](https://github.com/blurite/rsprox#macos-support-osrs) explain the mapping.
+On Mac, the first custom target needs `127.0.255.3` on `lo0`. The bundle adds it when needed. If you have multiple custom targets, follow the [RSProx group ID instructions](https://github.com/blurite/rsprox#macos-support-osrs).
+
+## Maintainer
+
+Run `./build-bundles.sh` with Java 21 to make the three release zips. The build verifies the official RSProx v1.0 launcher SHA-256 before packaging. The public address and login modulus live in `proxy-targets.yaml`; rebuild and republish when they change.
