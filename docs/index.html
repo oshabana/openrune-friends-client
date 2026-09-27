@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101c20">
+  <meta name="description" content="Download the OpenRune Friends client for Mac, Windows, or Linux and join our community game world.">
+  <title>Download the client | OpenRune Friends</title>
+  <style>
+    :root { color-scheme: dark; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: #e9e5d7; background: #101c20; }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid #e9bb64; outline-offset: 4px; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: auto; }
+    header { border-bottom: 1px solid #ffffff20; background: #0d171be8; }
+    .nav { display: flex; justify-content: space-between; align-items: center; min-height: 76px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-family: Georgia, serif; font-size: 19px; letter-spacing: .03em; }
+    .mark { display: inline-grid; place-items: center; width: 39px; height: 39px; border: 1px solid #c9a55d; border-radius: 9px; color: #e9bb64; font-weight: 700; box-shadow: inset 0 0 0 3px #101c20, inset 0 0 0 4px #c9a55d88; }
+    .nav-link { color: #c9d0ca; text-decoration: none; font-size: 14px; }
+    .nav-link:hover { color: #fff; }
+    .hero { position: relative; overflow: hidden; padding: 80px 0 66px; background: radial-gradient(circle at 83% 26%, #315357 0, transparent 35%), radial-gradient(circle at 5% 110%, #2c3832 0, transparent 44%), #142529; }
+    .hero::after { content: ""; position: absolute; inset: 0; opacity: .13; pointer-events: none; background-image: linear-gradient(90deg, #b1bbad 1px, transparent 1px), linear-gradient(#b1bbad 1px, transparent 1px); background-size: 44px 44px; mask-image: linear-gradient(90deg, transparent, black); }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 40px; }
+    .eyebrow { color: #e4bc70; font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; }
+    h1 { max-width: 670px; margin: 16px 0 17px; font-size: clamp(42px, 5vw, 69px); line-height: 1.06; letter-spacing: -.035em; }
+    .lead { max-width: 570px; margin: 0; color: #d0d8d0; font-size: 18px; line-height: 1.65; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-top: 32px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 49px; padding: 0 22px; border: 1px solid #e6b866; border-radius: 7px; background: #e6b866; color: #172023; font-size: 14px; font-weight: 750; text-decoration: none; transition: transform .15s, background .15s; }
+    .button:hover { transform: translateY(-2px); background: #f7ca7d; }
+    .text-link { color: #e6c58b; font-size: 14px; text-underline-offset: 4px; }
+    .seal { justify-self: center; position: relative; display: grid; place-items: center; width: min(310px, 63vw); aspect-ratio: 1; border: 1px solid #d8bc7b77; border-radius: 50%; box-shadow: 0 0 0 12px #e0c27a0b, 0 0 0 13px #e0c27a33, 0 0 80px #e0c27a13; transform: rotate(-12deg); }
+    .seal::before { content: ""; position: absolute; inset: 25px; border: 1px dashed #d8bc7b77; border-radius: 50%; }
+    .seal span { color: #d9b875; font-family: Georgia, serif; font-size: 108px; letter-spacing: -.15em; padding-right: .12em; text-shadow: 0 0 32px #e3b86277; }
+    main { padding: 60px 0 84px; }
+    h2 { margin: 0 0 10px; font-size: clamp(30px, 3vw, 42px); }
+    .muted { margin: 0; color: #aebdb7; line-height: 1.6; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; margin-top: 27px; }
+    .card { display: flex; flex-direction: column; min-height: 228px; padding: 26px; border: 1px solid #62757266; border-radius: 12px; background: linear-gradient(145deg, #263637, #1b292c); box-shadow: 0 12px 30px #050d0e36; }
+    .card .icon { color: #e8bd70; font-size: 29px; line-height: 1; }
+    .card h3 { margin: 19px 0 5px; font-family: Georgia, serif; font-size: 25px; font-weight: 500; }
+    .card p { margin: 0 0 21px; color: #b8c6bf; font-size: 14px; line-height: 1.5; }
+    .card a { margin-top: auto; color: #f0c982; font-size: 15px; font-weight: 700; text-decoration: none; }
+    .card a:hover { text-decoration: underline; text-underline-offset: 4px; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 60px; padding-top: 43px; border-top: 1px solid #ffffff20; }
+    .step-number { display: inline-grid; place-items: center; width: 32px; height: 32px; border: 1px solid #d0aa6a99; border-radius: 50%; color: #eec57d; font-family: Georgia, serif; }
+    .step h3 { margin: 17px 0 7px; font-size: 17px; }
+    .step p { margin: 0; color: #b8c6bf; font-size: 14px; line-height: 1.65; }
+    .step a, .note a { color: #e7c788; text-underline-offset: 3px; }
+    .note { margin-top: 42px; padding: 20px 24px; border-left: 3px solid #d6ae69; background: #1b292b; color: #c3ccc3; font-size: 14px; line-height: 1.65; }
+    footer { border-top: 1px solid #ffffff20; padding: 24px 0 35px; color: #aab7b0; font-size: 12px; line-height: 1.6; }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+    footer a { color: #d7b978; }
+    @media (max-width: 760px) { .hero { padding: 58px 0; } .hero-grid { grid-template-columns: 1fr; } .seal { display: none; } .cards, .steps { grid-template-columns: 1fr; } .card { min-height: 190px; } .steps { gap: 27px; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transition: none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top"><span class="mark" aria-hidden="true">OR</span><span>OpenRune Friends</span></a>
+      <a class="nav-link" href="#download">Download the client ↓</a>
+    </div>
+  </header>
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">A world for friends</div>
+        <h1>Your next adventure starts here.</h1>
+        <p class="lead">Download the OpenRune Friends client, choose our world, and play together. Available for Mac, Windows, and Linux.</p>
+        <div class="hero-actions">
+          <a class="button" href="#download">Choose your download</a>
+          <a class="text-link" href="https://github.com/oshabana/openrune-friends-client/releases/tag/v0.1.0">View release details</a>
+        </div>
+      </div>
+      <div class="seal" aria-hidden="true"><span>OR</span></div>
+    </div>
+  </section>
+  <main class="wrap" id="download">
+    <h2>Download for your computer</h2>
+    <p class="muted">Pick one file. The server connection is already included.</p>
+    <div class="cards">
+      <article class="card"><div class="icon" aria-hidden="true">⌘</div><h3>Mac</h3><p>Apple Silicon or Intel · Java 21 required</p><a href="https://github.com/oshabana/openrune-friends-client/releases/download/v0.1.0/OpenRune-Friends-macos.zip">Download for Mac →</a></article>
+      <article class="card"><div class="icon" aria-hidden="true">▦</div><h3>Windows</h3><p>Windows desktop · Java 21 required</p><a href="https://github.com/oshabana/openrune-friends-client/releases/download/v0.1.0/OpenRune-Friends-windows.zip">Download for Windows →</a></article>
+      <article class="card"><div class="icon" aria-hidden="true">⌘</div><h3>Linux</h3><p>Linux desktop · Java 21 required</p><a href="https://github.com/oshabana/openrune-friends-client/releases/download/v0.1.0/OpenRune-Friends-linux.zip">Download for Linux →</a></article>
+    </div>
+    <div class="steps" aria-label="How to start playing">
+      <div class="step"><span class="step-number">1</span><h3>Install Java 21</h3><p>Get <a href="https://adoptium.net/temurin/releases/?version=21">Temurin Java 21</a> if it is not already installed.</p></div>
+      <div class="step"><span class="step-number">2</span><h3>Open the launcher</h3><p>Extract the zip and open <strong>Launch OpenRune</strong>. On Mac, approve the network prompt. If macOS blocks the file, right-click it and choose Open.</p></div>
+      <div class="step"><span class="step-number">3</span><h3>Choose the world</h3><p>In RSProx, select <strong>OpenRune Friends</strong>, choose <strong>RuneLite</strong>, and launch. Sign in to world 255.</p></div>
+    </div>
+    <div class="note">Quest Helper and 117 HD are selected for RuneLite's Plugin Hub on first launch. If either one does not appear, open RuneLite's wrench icon and install it from Plugin Hub. <a href="https://github.com/oshabana/openrune-friends-client#download">Full instructions and checksums</a>.</div>
+  </main>
+  <footer><div class="wrap"><span>OpenRune Friends is an independent community server. It is not affiliated with Jagex, RuneLite, or RSProx.</span><a href="https://github.com/oshabana/openrune-friends-client">Source and setup help</a></div></footer>
+</body>
+</html>
