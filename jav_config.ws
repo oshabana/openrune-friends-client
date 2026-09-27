@@ -54,7 +54,7 @@ param=25=240
 param=5=1
 param=6=0
 param=2=https://payments.jagex.com/
-param=17=https://raw.githubusercontent.com/oshabana/openrune-friends-client/main/world_list.ws
+param=17=https://raw.githubusercontent.com/oshabana/scapemar-client/main/world_list.ws
 param=20=https://social.auth.jagex.com/
 param=11=https://auth.jagex.com/
 param=19=196515767263-1oo20deqm6edn7ujlihl6rpadk9drhva.apps.googleusercontent.com

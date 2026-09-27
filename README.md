@@ -1,10 +1,10 @@
 # ScapeMar
 
-ScapeMar client downloads for world 255. The server is already hosted. [Choose your download](https://oshabana.github.io/openrune-friends-client/).
+ScapeMar client downloads for world 255. The server is already hosted. [Choose your download](https://oshabana.github.io/scapemar-client/).
 
 ## Download
 
-Choose your computer from the [latest release](https://github.com/oshabana/openrune-friends-client/releases/latest):
+Choose your computer from the [latest release](https://github.com/oshabana/scapemar-client/releases/latest):
 
 | Computer | File | Open after extracting |
 | --- | --- | --- |
@@ -18,13 +18,13 @@ The launcher installs the public server connection and selects **Quest Helper** 
 
 If either plugin does not appear, open RuneLite's wrench icon, open **Plugin Hub**, search for **Quest Helper** or **117 HD**, and click **Install**. The plugins come from RuneLite's Plugin Hub and receive updates there.
 
-The bundle contains the [official RSProx launcher](https://github.com/blurite/rsprox/releases/tag/v1.0), the public connection profile, and our setup launcher. It contains no server code, account credentials, or modified RuneLite binary. The [release checksums](https://github.com/oshabana/openrune-friends-client/releases/latest) let you check the downloaded zips. This is an independent community server, not a Jagex or RuneLite service.
+The bundle contains the [official RSProx launcher](https://github.com/blurite/rsprox/releases/tag/v1.0), the public connection profile, and our setup launcher. It contains no server code, account credentials, or modified RuneLite binary. The [release checksums](https://github.com/oshabana/scapemar-client/releases/latest) let you check the downloaded zips. ScapeMar is unofficial and is not affiliated with Jagex, RuneLite, or RSProx.
 
 ## If you already use RSProx
 
-The launcher updates the previous OpenRune Friends profile to ScapeMar. It leaves any other existing RSProx target file alone. If you have a different target file, import this URL in RSProx instead:
+The launcher can migrate an unchanged earlier profile to ScapeMar. It leaves any other existing RSProx target file alone. If you have a different target file, import this URL in RSProx instead:
 
-`https://raw.githubusercontent.com/oshabana/openrune-friends-client/main/proxy-targets.yaml`
+`https://raw.githubusercontent.com/oshabana/scapemar-client/main/proxy-targets.yaml`
 
 On Mac, the first custom target needs `127.0.255.3` on `lo0`. The bundle adds it when needed. If you have multiple custom targets, follow the [RSProx group ID instructions](https://github.com/blurite/rsprox#macos-support-osrs).
 
