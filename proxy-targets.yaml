@@ -1,0 +1,7 @@
+config:
+  - id: 1
+    name: OpenRune Friends
+    jav_config_url: https://raw.githubusercontent.com/oshabana/openrune-friends-client/main/jav_config.ws
+    varp_count: 15000
+    revision: 240
+    modulus: b9485a771dc8fe87a0485ab7c6d17cf078559cf0c5bbde9b0d18e2119d92d8da3c8060dbabd67208996455c0ffeb697773949dacec8789b56d8d20393f304860e9df185b6842d303e0fe98f6997ab3470749078e932372a9344e966c7b3cfc898944c6603594db718159f202c734621e13f456ecd97a920f4d327c259ad3f727
