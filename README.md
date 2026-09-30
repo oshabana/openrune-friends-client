@@ -14,7 +14,7 @@ Choose your computer from the [latest release](https://github.com/oshabana/scape
 
 Install [Java 21](https://adoptium.net/temurin/releases/?version=21) first. Extract the whole zip, then open the launcher. On Mac, approve the network prompt. If macOS blocks the downloaded launcher, right-click it and choose **Open**.
 
-The launcher installs the public server connection and selects **Quest Helper** and **117 HD** for RuneLite's Plugin Hub. RSProx then opens: select **ScapeMar**, choose **RuneLite**, and click **Launch**. Sign in to world 255 with the account name and password you want to use here.
+The launcher installs the public server connection and selects **Quest Helper** and **117 HD** for RuneLite's Plugin Hub. RSProx then opens: select **ScapeMar**, choose **RuneLite**, and click **Launch**. On the login screen, click **New User** to pick a username and password (typed twice), or **Existing User** to sign in.
 
 If either plugin does not appear, open RuneLite's wrench icon, open **Plugin Hub**, search for **Quest Helper** or **117 HD**, and click **Install**. The plugins come from RuneLite's Plugin Hub and receive updates there.
 
@@ -30,4 +30,4 @@ On Mac, the first custom target needs `127.0.255.3` on `lo0`. The bundle adds it
 
 ## Maintainer
 
-Run `./build-bundles.sh` with Java 21 to make the three release zips. The build verifies the official RSProx v1.0 launcher SHA-256 before packaging. The public address and login modulus live in `proxy-targets.yaml`; rebuild and republish when they change.
+Run `./build-bundles.sh` with Java 21 to make the three release zips. `./build-login-plugin.sh` builds only the login plugin into `dist/ScapeMar-Login.jar`, where the game server's local `play.sh` picks it up. The build verifies the official RSProx v1.0 launcher SHA-256 before packaging. The public address and login modulus live in `proxy-targets.yaml`; rebuild and republish when they change.

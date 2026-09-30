@@ -5,8 +5,8 @@ On Mac, approve the one-time loopback network change when prompted.
 
 The launcher installs the ScapeMar connection profile and asks RuneLite's
 Plugin Hub to install Quest Helper and 117 HD. It then opens RSProx. In RSProx,
-select ScapeMar, choose RuneLite, and click Launch. Sign in to world 255
-with the account name and password you want to use on this server.
+select ScapeMar, choose RuneLite, and click Launch. On the login screen,
+click New User to pick a username and password, or Existing User to sign in.
 
 If macOS blocks the downloaded .command file, right-click it and choose Open.
 If a plugin does not appear, use RuneLite's wrench icon, open Plugin Hub, and
