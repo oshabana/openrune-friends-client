@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 
 public class ScapeMarLauncher {
     private static final String PLUGIN_KEY = "runelite.externalPlugins";
+    private static final String LOGIN_PLUGIN = "ScapeMar-Login.jar";
     private static final Pattern PROFILE = Pattern.compile("\\{([^{}]*)\\}");
     private static final Pattern NAME = Pattern.compile("\"name\"\\s*:\\s*\"([^\"]+)\"");
     private static final Pattern ID = Pattern.compile("\"id\"\\s*:\\s*(-?\\d+)");
@@ -25,6 +26,7 @@ public class ScapeMarLauncher {
         Path home = Path.of(System.getProperty("user.home"));
         installTarget(bundle.resolve("proxy-targets.yaml"), home.resolve(".rsprox/proxy-targets.yaml"));
         installPlugins(home.resolve(".runelite"));
+        installLoginPlugin(bundle.resolve(LOGIN_PLUGIN), home.resolve(".rlcustom/sideloaded-plugins"));
         if (args.length > 0 && args[0].equals("--setup-only")) {
             System.out.println("ScapeMar connection and plugins configured.");
             return;
@@ -120,6 +122,14 @@ public class ScapeMarLauncher {
                 StandardCopyOption.REPLACE_EXISTING);
         }
         Files.write(config, lines, StandardCharsets.UTF_8);
+    }
+
+    private static void installLoginPlugin(Path source, Path sideloaded) throws IOException {
+        if (!Files.isRegularFile(source)) {
+            throw new IOException(LOGIN_PLUGIN + " is missing from this bundle.");
+        }
+        Files.createDirectories(sideloaded);
+        Files.copy(source, sideloaded.resolve(LOGIN_PLUGIN), StandardCopyOption.REPLACE_EXISTING);
     }
 
     private static boolean isWindows() {
